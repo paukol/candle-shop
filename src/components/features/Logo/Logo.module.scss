@@ -1,0 +1,38 @@
+@import '../../../styles/settings.scss';
+@import '../../../styles/global.scss';
+
+.root {
+    height: 100vh;
+    width: 100%;
+    background-color: $color-blue;
+    background: url('https://images.pexels.com/photos/8253222/pexels-photo-8253222.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    .overlay {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        background:rgba(156, 104, 104, 0.3);
+        .title {
+            color: $color-white;
+            padding: 20px 40px;
+            font-family: $font-logo;
+            font-size: 100px;
+            border: 5px solid $color-white;
+            border-radius: 10px;
+        }
+    }
+}
+
+
+@include tablet {
+    .root {
+       height: 80vh;
+    }
+}
+
+@include mobile {
+    .root {
+        display: none;
+    }
+}

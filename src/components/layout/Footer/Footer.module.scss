@@ -1,0 +1,46 @@
+@import '../../../styles/settings.scss';
+
+.root {
+    background-color: $color-blue;
+    .footerLink {
+        display: flex;
+        justify-content: center;
+        .navLink {
+            font-family: $font-main;
+            font-size: 24px;
+            text-decoration: none;
+            color: $color-white;
+            margin: 20px 30px;
+        }
+    }
+    .leftBar {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 10px;
+        h2 {
+            margin-right: 10px;
+        }
+        .iconBox {
+            .icon {
+                cursor: pointer;
+                color: $color-white;
+                width: 30px;
+                &:hover {
+                    transform: scale(1.6);
+                    transition: 2s all;
+                }
+            }
+        }
+    }
+    .copyright {
+        display: flex;
+        justify-content: center;
+
+        span {
+            color: $color-white;
+            padding-bottom: 20px;
+            font-family: $font-main;
+        }
+    }
+}

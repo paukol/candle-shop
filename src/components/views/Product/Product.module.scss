@@ -1,0 +1,130 @@
+@import '../../../styles/settings.scss';
+@import '../../../styles/global.scss';
+
+.root {
+    display: flex;
+    height: auto;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 40px 0px;
+    font-family: $font-main;
+    .container {
+        display: flex;
+        width: 100%;
+        .leftContainer {
+            flex: 0 0 48%;
+            .postBox {
+                height: 510px;
+                margin: 0 20px;
+                border: 2px solid gray;
+                border-radius: 5px;
+                display: flex;
+                flex: 0 0 30%;
+                flex-direction: column;
+                text-decoration: none;
+                color: black;
+                .image {
+                    height: 80%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+                .title {
+                    font-weight: bold;
+                    text-align: center;
+                    font-size: 20px;
+                }
+                .price {
+                    font-weight: bold;
+                    text-align: center;
+                    font-size: 14px;
+                }
+            }
+            .imagesBox {
+                margin: 0 20px;
+                border: 2px solid gray;
+                border-top: none;
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                .addPhoto {
+                    width: 200px;
+                    height: 200px;
+                    object-fit: cover;
+                    margin: 0 20px;
+                    padding: 10px 0;
+                }
+            }
+        }
+        .rightContainer {
+            border: 2px solid gray;
+            border-radius: 5px;
+            flex: 0 0 48%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h2 {
+                font-weight: bold;
+                text-align: center;
+                font-size: 20px;
+            }
+            p {
+                font-size: 16px;
+                padding: 10px 30px;
+                select {
+                    margin-left: 20px;
+                }
+            }
+            .button {
+                padding: 10px 30px;
+                font-size: 16px;
+                border-radius: 4px;
+                background-color: black;
+                color: $color-white;
+                text-decoration: none;
+                margin: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+@include tablet {
+    .root {
+        .container {
+            flex-direction: column;
+            .rightContainer {
+                margin: 20px;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .root {
+        .container {
+            flex-direction: column;
+            width: 100%;
+            .rightContainer {
+                flex: 0 0 44%;
+                margin: 0 20px;
+                width: 90%;
+                p {
+                    margin: 0;
+                }
+            }
+            .leftContainer {
+                width: 100%;
+                flex: 0 0 44%;
+                .postBox {
+                    height: auto;
+                }
+                .imagesBox {
+                    flex-direction: column;
+                    align-items: center;
+                   
+                }
+            }
+        }
+    }
+}

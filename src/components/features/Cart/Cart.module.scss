@@ -1,0 +1,112 @@
+@import '../../../styles/settings.scss';
+@import '../../../styles/global.scss';
+
+
+.root {
+  min-height: 518px;
+  .cart {
+    margin: 2rem auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    .cart__linkBox {
+      font-size: 1rem;
+      .cart__link {
+      text-decoration: none;
+      }
+    }
+    .cart__items {
+      flex: 0.7;
+      margin-right: 1rem;
+    }
+    .cart__summary {
+      margin-right: 1rem;
+      height: 250px;
+      flex: 0.3;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      border-radius: 10px;
+      .summary__title {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+      
+      .summary__price {
+        display: flex;
+        align-items: center;
+      }
+      
+      .summary__price span:nth-child(1) {
+        font-size: 1.2rem;
+        flex: 0.6;
+        font-weight: bold;
+      }
+      
+      .summary__price span:nth-child(2) {
+        flex: 0.4;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+      
+      .summary__checkoutBtn {
+        padding: 10px 17px;
+        border: 1px solid $color-blue;
+        border-radius: 10px;
+        background: $color-blue;
+        color: $color-white;
+        font-size: 1.2rem;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      
+      .summary__checkoutBtn:focus {
+        outline: none;
+        border: 1px solid $color-blue;
+      }
+      
+      .summary__checkoutBtn:hover {
+        opacity: 0.75;
+      }
+    }
+  }
+}
+
+  
+@include tablet {
+  .root {
+    min-height: 730px;
+    .cart {
+      width: 90%;
+      flex-direction: column;
+      .cart__linkBox {
+        margin: 20px 5px;
+      }
+      .cart__summary {
+        .summary__checkoutBtn {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .root {
+    min-height: 400px;
+    .cart {
+      width: 90%;
+      flex-direction: column;
+      .cart__linkBox {
+        margin: 20px 5px;
+      }
+      .cart__summary {
+        .summary__checkoutBtn {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

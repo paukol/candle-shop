@@ -1,0 +1,47 @@
+@import '../../../styles/settings.scss';
+@import '../../../styles/global.scss';
+
+.root {
+    display: flex;
+    justify-content: flex-end;
+    background-color: $color-blue;
+    color: $color-white;
+    font-family: $font-main;
+    .icon {
+        font-size: 24px;
+        margin: 5px;
+    }
+    .rightBar {
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        padding-right: 10px;
+        .cartLink {
+            text-decoration: none;
+            h2 {
+                cursor: pointer;
+                padding: 0 10px;
+                color: $color-white;
+            }
+        }
+    }
+}
+
+
+
+@include mobile {
+    .root {
+        flex-direction: column;
+        .leftBar {
+            padding-top: 3px;
+            justify-content: space-between;
+        }
+        .rightBar {
+            padding-right: 2px;
+            justify-content: center;
+            h2 {
+                margin-right: 10px;
+            }
+        }
+    }
+}
