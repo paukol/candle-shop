@@ -30,7 +30,13 @@ app.use((req, res) => {
 });
 
 /* MONGOOSE */
-mongoose.connect(`mongodb+srv://paukol:1234567890@cluster0.73vtl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`, { useNewUrlParser: true, dbName: "CandleStore" });
+let dbUri = 'mongodb+srv://paukol:1234567890@cluster0.73vtl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+
+mongoose.connect(dbUri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
 const db = mongoose.connection;
 
 db.once('open', () => {
