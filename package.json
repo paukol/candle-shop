@@ -10,7 +10,6 @@
     "eject": "react-scripts eject",
     "data:import": "node backend/seederScript.js"
   },
-
   "lint-staged": {
     "src/**/*.js": [
       "yarn test-related --",
@@ -39,6 +38,7 @@
     "axios": "^0.19.0",
     "clsx": "^1.1.1",
     "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "express": "^4.17.1",
@@ -61,6 +61,6 @@
   "devDependencies": {
     "husky": "^3.1.0",
     "lint-staged": "^9.4.3",
-    "redux-devtools-extension": "^2.13.8"
+    "redux-devtools-extension": "^2.13.9"
   }
 }

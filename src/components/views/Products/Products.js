@@ -32,8 +32,6 @@ const Component = ({className, getProducts, products, error, loading}) => {
             </div>
           ))}
         </div>
-
-        
       )}
     </div>
   );
