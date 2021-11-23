@@ -4,7 +4,7 @@ import { API_URL } from '../../config';
 
 export const addToCart = (id, qty, request) => async (dispatch, getState) => {
   const { data } = await axios.get(`${API_URL}/products/${id}`);
-  
+
   dispatch({
     type: actionTypes.ADD_TO_CART,
     payload: {
@@ -13,7 +13,6 @@ export const addToCart = (id, qty, request) => async (dispatch, getState) => {
       photo: data.photo,
       price: data.price,
       description: data.description,
-      shortDesc: data.shortDesc,
       addPhoto1: data.addPhoto1,
       addPhoto2: data.addPhoto2,
       addPhoto3: data.addPhoto3,
@@ -22,7 +21,6 @@ export const addToCart = (id, qty, request) => async (dispatch, getState) => {
       request: '',
     },
   });
-
   localStorage.setItem('cart', JSON.stringify(getState().cart.cartItems));
 };
 

@@ -1,54 +1,38 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const mongoose = require('mongoose');
 const path = require('path');
 
-/* ROUTES */
 const productsRoutes = require('./routes/productsRoutes');
-const orderRoutes = require('./routes/orderRoutes');
-
+const ordersRoutes = require('./routes/orderRoutes');
+const connectDB = require('./db');
 const app = express();
 
 /* MIDDLEWARE */
 app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-/* SERVE STATIC FILES */
-app.use(express.static(path.join(__dirname + '/public')));
+app.use(express.urlencoded({ extended: false }));
 
 /* API ENDPOINTS */
 app.use('/api', productsRoutes);
-app.use('/api', orderRoutes);
+app.use('/api', ordersRoutes);
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname + '/public/index.html'));
+/* API ERROR PAGES */
+app.use('/api', (req, res) => {
+  res.status(404).send({ product: 'Not found...' });
 });
 
-app.use((req, res) => {
-  res.status(404).json({ message: 'Not found ' });
+/* REACT WEBSITE */
+app.use(express.static(path.join(__dirname, '../build')));
+app.use('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../build/index.html'));
 });
 
 /* MONGOOSE */
-let dbUri = 'mongodb+srv://paukol:1234567890@cluster0.73vtl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
-
-mongoose.connect(dbUri, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-
-const db = mongoose.connection;
-
-db.once('open', () => {
-  console.log('Conntected to the database');
-});
-
-db.on('error', err => console.log('Error ' + err));
+connectDB();
 
 /* START SERVER */
 const port = process.env.PORT || 8000;
-const server = app.listen(port, () => {
-  console.log('Server is running on port: ' + port);
+app.listen(port, () => {
+  console.log('Server is running on port: '+ port);
 });
-
-module.exports = server;

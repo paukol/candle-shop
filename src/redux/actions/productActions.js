@@ -2,6 +2,7 @@ import * as actionTypes from '../constants/productConstants';
 import axios from 'axios';
 import { API_URL } from '../../config';
 
+
 export const getProducts = () => async (dispatch) => {
   try {
     dispatch({ type: actionTypes.GET_PRODUCTS_REQUEST });
@@ -28,6 +29,7 @@ export const getProductDetails = (id) => async (dispatch) => {
     dispatch({ type: actionTypes.GET_PRODUCT_DETAILS_REQUEST });
 
     const { data } = await axios.get(`${API_URL}/products/${id}`);
+
     dispatch({
       type: actionTypes.GET_PRODUCT_DETAILS_SUCCESS,
       payload: data,

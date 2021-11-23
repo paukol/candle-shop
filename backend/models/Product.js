@@ -9,7 +9,6 @@ const productSchema = new mongoose.Schema({
   addPhoto1: { type: String, required: true },
   addPhoto2: { type: String, required: true },
   addPhoto3: { type: String, required: true },
-  countInStock: { type: Number,required: true },
 });
 
 module.exports = mongoose.model('Product', productSchema);
