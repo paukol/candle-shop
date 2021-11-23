@@ -1,6 +1,6 @@
 import * as actionTypes from '../constants/orderConstants';
 import axios from 'axios';
-
+import { API_URL } from '../../config';
 
 export const addOneOrder= (data) => {
   return (dispatch, getState) => {
@@ -12,7 +12,7 @@ export const addOneOrder= (data) => {
     */
   
     axios
-      .post(`http://localhost:8000/api/orders`, data)
+    .post(`${API_URL}/orders`, data)
       .then(() => {
         dispatch({
           type: actionTypes.ADD_ORDER,

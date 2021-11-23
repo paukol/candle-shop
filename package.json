@@ -6,7 +6,8 @@
     "start": "run-p start:* ",
     "start-silent": "run-p start > /dev/null",
     "start:react": "react-scripts start",
-    "build": "react-scripts build",
+    "server": "npx nodemon backend/server.js",
+    "build": "yarn install && react-scripts build",
     "eject": "react-scripts eject",
     "data:import": "node backend/seederScript.js"
   },
