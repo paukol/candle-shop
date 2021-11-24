@@ -7,6 +7,10 @@
     "start-silent": "run-p start > /dev/null",
     "start:react": "react-scripts start",
     "server": "npx nodemon backend/server.js",
+    "start-and-test": "run-p start-silent test ",
+    "test": "react-scripts test --noStackTrace",
+    "test-all": "react-scripts test --watchAll=false --noStackTrace",
+    "test-related": "react-scripts test --watchAll=false --noStackTrace --findRelatedTests",
     "build": "yarn install && react-scripts build",
     "eject": "react-scripts eject",
     "data:import": "node backend/seederScript.js"
@@ -28,6 +32,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
