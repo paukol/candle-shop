@@ -1,6 +1,6 @@
 Heroku
 
-https://ancient-hamlet-78306.herokuapp.com/home
+https://ancient-hamlet-78306.herokuapp.com/
 
 Local run
 
