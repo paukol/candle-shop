@@ -33,7 +33,7 @@ const Component = ({className, item, remove, addToCart, adjustItemRequest}) => {
           <p className={styles.details__title}>{item.title}</p>
           <p className={styles.details__desc}>{item.shortDesc}</p>
           <label htmlFor="requests">Additional request:</label>
-          <textarea name="requests" value={area} rows="4" onChange={onChangeRequestHandler}></textarea>
+          <textarea name="requests" value={area} rows="5" onChange={onChangeRequestHandler}></textarea>
           <p className={styles.details__price}>$ {item.price}</p>
         </div>
         <div className={styles.cartItem__actions}>

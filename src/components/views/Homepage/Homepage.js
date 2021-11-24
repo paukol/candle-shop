@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Products} from '../Products/Products';
-import {Logo} from '../../features/Logo/Logo';
+import {LogoBar} from '../../features/LogoBar/LogoBar';
 //import {NavBar} from '../../layout/NavBar/NavBar';
 
 import clsx from 'clsx';
@@ -13,7 +13,7 @@ import styles from './Homepage.module.scss';
 
 const Component = ({className}) => (
   <div className={clsx(className, styles.root)}>
-    <Logo/>
+    <LogoBar/>
     <Products/>
   </div>
 );

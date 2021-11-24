@@ -2,7 +2,7 @@
 @import '../../../styles/global.scss';
 
 .root {
-    height: 60vh;
+    height: 70vh;
     width: 100%;
     background-color: $color-main;
     background: url('https://images.pexels.com/photos/8253222/pexels-photo-8253222.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');   
@@ -15,14 +15,10 @@
         justify-content: center;
         height: 100%;
         width: 100%;
-        background:rgba(156, 104, 104, 0.3);
         .title {
             color: $color-white;
-            padding: 20px 40px;
             font-family: $font-main;
-            font-size: 100px;
-            border: 5px solid $color-white;
-            border-radius: 10px;
+            font-size: 120px;
         }
     }
 }

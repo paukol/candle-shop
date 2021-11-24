@@ -49,7 +49,6 @@ const Component = ({className, cart, addNewOrder}) => {
   
   const submitForm = (e) => {
     e.preventDefault();
-    //console.log(order.cart, order.name, order.surname, order.address);
     if(order.cart && order.name && order.surname && order.address && order.email){
       order.id = uuidv4();
       addNewOrder(order);
@@ -88,7 +87,7 @@ const Component = ({className, cart, addNewOrder}) => {
           </div>
         </div>
       </div>
-      <div className={styles.formBox}>
+      <div className={styles.formPart}>
         {cart.length === 0 ? (
           <div>
             <></>
@@ -103,7 +102,7 @@ const Component = ({className, cart, addNewOrder}) => {
             <input className={styles.formInput} type="text" name="address" onChange={handleChange}></input>
             <label>Email</label>
             <input className={styles.formInput} type="email" name="email" onChange={handleChange}></input>
-            <button className={styles.summary__checkoutBtn} type="submit">Send order</button>
+            <button className={styles.checkoutBtn} type="submit">Send order</button>
           </form>
         )}
       </div>

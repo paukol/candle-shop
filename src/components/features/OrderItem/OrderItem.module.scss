@@ -6,8 +6,8 @@
   .cartItem {
       margin-bottom: 1rem;
       display: flex;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-      border-radius: 10px;
+      border-style: outset;
+      border-color: #f0f0f0cb;
       .cartItem__image {
         width: 200px;
         height: 250px;

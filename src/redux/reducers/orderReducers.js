@@ -1,4 +1,4 @@
-import * as actionTypes from '../constants/orderConstants';
+import * as actionTypes from '../constant/orderConstant';
 
 const ORDER_INITIAL_STATE = {
   orders: [],

@@ -14,7 +14,6 @@
             height: 600px;
             margin: 10px 20px;
             border: 2px solid gray;
-            border-radius: 5px;
             display: flex;
             flex: 0 0 30%;
             flex-direction: column;
@@ -43,8 +42,7 @@
                 padding: 10px 30px;
                 height: 20%;
                 font-size: 16px;
-                border-radius: 4px;
-                background-color: black;
+                background-color: $color-main;
                 color: $color-white;
                 text-decoration: none;
                 margin: 10px;

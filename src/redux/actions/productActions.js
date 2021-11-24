@@ -1,4 +1,4 @@
-import * as actionTypes from '../constants/productConstants';
+import * as actionTypes from '../constant/productConstant';
 import axios from 'axios';
 import { API_URL } from '../config';
 

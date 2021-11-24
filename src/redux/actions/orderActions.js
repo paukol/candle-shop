@@ -1,5 +1,4 @@
-
-import * as actionTypes from '../constants/orderConstants';
+import * as actionTypes from '../constant/orderConstant';
 import axios from 'axios';
 import { API_URL } from '../config';
 

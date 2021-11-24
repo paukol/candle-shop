@@ -6,7 +6,6 @@ import clsx from 'clsx';
 
 import { connect } from 'react-redux';
 import {Link} from 'react-router-dom';
-// import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
 import styles from './Cart.module.scss';
 
@@ -42,7 +41,7 @@ const Component = ({className, cart}) => {
             <span>$ {getCartSubTotal()}</span>
           </div>
           <Link to='/order'>
-            <button className={styles.summary__checkoutBtn}>
+            <button className={styles.checkoutBtn}>
           Proceed To Checkout
             </button>
           </Link>
@@ -60,10 +59,6 @@ Component.propTypes = {
 const mapStateToProps = state => ({
   cart: state.cart.cartItems,
 });
-
-// const mapDispatchToProps = dispatch => ({
-//   someAction: arg => dispatch(reduxActionCreator(arg)),
-// });
 
 const Container = connect(mapStateToProps)(Component);
 

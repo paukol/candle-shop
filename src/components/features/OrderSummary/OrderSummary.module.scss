@@ -27,8 +27,8 @@
       flex-direction: column;
       justify-content: space-between;
       padding: 1rem;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-      border-radius: 10px;
+      border-style: outset;
+      border-color: #f0f0f0cb;
       .summary__title {
         font-size: 1.2rem;
         font-weight: bold;
@@ -51,7 +51,7 @@
       }
     }
   } 
-  .formBox {
+  .formPart {
     display: flex;
     justify-content: center;
     margin: 20px 10px;
@@ -62,7 +62,6 @@
       .formInput {
         margin: 10px 20px;
         border: 1px solid $color-main;
-        border-radius: 5px;
         padding: 10px;
         resize: none;
       }
@@ -70,22 +69,21 @@
           font-size: 16px;
           margin: 10px 20px;
       }
-      .summary__checkoutBtn {
+      .checkoutBtn {
         padding: 10px 17px;
         margin: 20px 10px;
         border: 1px solid $color-main;
-        border-radius: 10px;
         background: $color-main;
         color: $color-white;
         font-size: 1.2rem;
         font-weight: bold;
         cursor: pointer;
       }
-      .summary__checkoutBtn:focus {
+      .checkoutBtn:focus {
         outline: none;
         border: 1px solid $color-main;
       }
-      .summary__checkoutBtn:hover {
+      .checkoutBtn:hover {
         opacity: 0.75;
       }
     }
@@ -106,12 +104,12 @@
         margin: 20px 5px;
       }
       .cart__summary {
-        .summary__checkoutBtn {
+        .checkoutBtn {
           margin-top: 20px;
         }
       }
     }
-    .formBox {
+    .formPart {
       .addForm {
         width: 80%;
       }
@@ -129,12 +127,12 @@
         margin: 20px 5px;
       }
       .cart__summary {
-        .summary__checkoutBtn {
+        .checkoutBtn {
           margin-top: 20px;
         }
       }
     }
-    .formBox {
+    .formPart {
       .addForm {
         width: 100%;
       }

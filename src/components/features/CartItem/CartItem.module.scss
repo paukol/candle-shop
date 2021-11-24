@@ -3,14 +3,12 @@
 
 .root {
   .cartItem {
-    margin-bottom: 1rem;
+    margin-bottom: 2px;
+    border-style: outset;
+    border-color: #f0f0f0cb;
     display: flex;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-    border-radius: 10px;
     .cartItem__image {
-      width: 350px;
-      object-fit: contain;
-      border-radius: 10px;
+      width: 200px;
     }
     .cartItem__details {
       padding: 1rem;
