@@ -4,15 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import clsx from 'clsx';
 
-// import { connect } from 'react-redux';
-// import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
-
 import styles from './Footer.module.scss';
 
 const Component = ({className}) => (
   <footer className={clsx(className, styles.root)}>
-      <div className={styles.leftBar}>
-        <div className={styles.iconBox}>
+      <div className={styles.footerBar}>
+        <div className={styles.iconBar}>
           <a href="https://facebook.com">
             <FontAwesomeIcon className={styles.icon} icon={faFacebook}></FontAwesomeIcon>
           </a>

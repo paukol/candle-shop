@@ -4,7 +4,7 @@
 .root {
     display: flex;
     justify-content: flex-end;
-    background-color: $color-blue;
+    background-color: $color-main;
     color: $color-white;
     font-family: $font-main;
     .icon {
@@ -28,12 +28,11 @@
 }
 
 
-
 @include mobile {
     .root {
         flex-direction: column;
         .leftBar {
-            padding-top: 3px;
+            padding-top: 5px;
             justify-content: space-between;
         }
         .rightBar {

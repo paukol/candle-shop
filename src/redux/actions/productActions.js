@@ -1,6 +1,6 @@
 import * as actionTypes from '../constants/productConstants';
 import axios from 'axios';
-import { API_URL } from '../../config';
+import { API_URL } from '../config';
 
 
 export const getProducts = () => async (dispatch) => {

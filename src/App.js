@@ -18,7 +18,7 @@ import { NotFound } from './components/views/NotFound/NotFound';
 
 const theme = createMuiTheme({
   palette: {
-    primary: { main: '#2B4C6F' },
+    primary: { main: '#C0C0C0' },
   },
 });
 
@@ -34,7 +34,6 @@ const App = () => (
               atLeave={{ opacity: 1 }}
               atActive={{ opacity: 1 }}
             >
-              <Route exact path='/' component={Homepage} />
               <Route exact path='/home' component={Homepage} />
               <Route exact path='/products' component={Products} />
               <Route exact path='/products/:id' component={Product} />

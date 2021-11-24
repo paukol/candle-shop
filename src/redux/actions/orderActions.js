@@ -1,7 +1,7 @@
 
 import * as actionTypes from '../constants/orderConstants';
 import axios from 'axios';
-import { API_URL } from '../../config';
+import { API_URL } from '../config';
 
 export const addOneOrder= (data) => {
   return (dispatch, getState) => {

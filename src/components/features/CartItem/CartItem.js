@@ -67,10 +67,6 @@ Component.propTypes = {
   adjustItemRequest: PropTypes.func,
 };
 
-// const mapStateToProps = state => ({
-//   someProp: reduxSelector(state),
-// });
-
 const mapDispatchToProps = (dispatch, props) => ({
   remove: (id) => dispatch(removeFromCart(id)), 
   addToCart: (id, qty) => dispatch(addToCart(id, qty)), 
