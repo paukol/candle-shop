@@ -34,6 +34,7 @@ const App = () => (
               atLeave={{ opacity: 1 }}
               atActive={{ opacity: 1 }}
             >
+              <Route exact path='/' component={Homepage} />
               <Route exact path='/home' component={Homepage} />
               <Route exact path='/products' component={Products} />
               <Route exact path='/products/:id' component={Product} />
