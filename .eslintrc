@@ -29,7 +29,6 @@
   "rules": {
     "indent": [
       "error",
-      
       {"SwitchCase": 1}
     ],
     "linebreak-style": [

@@ -10,7 +10,7 @@ yarn start
 
 backend 
 
-yarn server
+npx nodemon backend/server.js
 
 
 

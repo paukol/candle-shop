@@ -35,10 +35,6 @@ const mapStateToProps = state => ({
   cart: state.cart.cartItems,
 });
 
-// const mapDispatchToProps = dispatch => ({
-//   someAction: arg => dispatch(reduxActionCreator(arg)),
-// });
-
 const Container = connect(mapStateToProps)(Component);
 
 export {
